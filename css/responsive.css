@@ -1,0 +1,115 @@
+/* Normal desktop :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+
+
+}
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+     .project-area .project-wrapper {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          row-gap: 5px;
+          column-gap: 5px;
+      }
+}
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+     .project-area .project-wrapper {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          row-gap: 5px;
+          column-gap: 5px;
+      }
+}
+
+ 
+/* small mobile :320px. */
+@media only screen and (min-width: 320px) and (max-width: 580px) {
+     /* hero area */
+     .hero-area .single-hero-item .hero-content h1{
+          font-size: 30px;
+     }
+     /* team area */
+     .team-area .team-wrapper-active .single-team {
+          width: 100%;
+      }
+     /* default section title area */
+      .section-title h4 {
+          line-height: 40px;
+      }
+     /* project area */
+      .project-area .project-wrapper {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          row-gap: 5px;
+          column-gap: 5px;
+      }
+     /* call action area */
+      .call-action h4 {
+          margin-bottom: 50px;
+          text-align: center;
+          line-height: 40px;
+          font-size: 25px;
+      }
+      .call-action .mobile-contact {
+          /* text-align: right; */
+          text-align: center;
+      }
+     /* customer area */
+     .customer-wrapper-active .owl-nav div {
+          left: 40px;
+     }
+     .customer-wrapper-active .owl-nav div.owl-prev {
+          left: auto;
+          right: 40px;
+     }
+     /* banner area */
+}
+ 
+/* Large Mobile :480px. */
+@media only screen and (max-width: 767px) {
+     /* project area */
+     .project-area .project-wrapper {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          row-gap: 5px;
+          column-gap: 5px;
+     }
+     /* customer area */
+     .customer-wrapper-active .owl-nav div {
+          left: 60px;
+     }
+     .customer-wrapper-active .owl-nav div.owl-prev {
+          left: auto;
+          right: 60px;
+     }
+}
+@media only screen and (min-width: 220px) and (max-width: 350px){
+     /* default section title area */
+     .section-title h4 {
+          line-height: 40px;
+      }
+     /* project area */
+      .project-area .project-wrapper {
+          display: grid;
+          grid-template-columns: auto;
+          row-gap: 40px;
+      }
+      .project-area .project-wrapper {
+          display: grid;
+          grid-template-columns: 1fr;
+          row-gap: 5px;
+          column-gap: 5px;
+      }
+     /* hero-area button group */
+     .group-btn {
+          flex-direction: column;
+          display: inline-block;
+          gap: 30px;
+     }
+     .group-btn a{
+          margin-bottom: 30px;
+     }
+}

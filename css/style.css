@@ -1,0 +1,371 @@
+/*
+  Theme Name: Name - Multipurpose HTML Template
+  Author: mdsalim400@gmail.com
+  Support: admin@gmail.com
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+
+/* CSS Index
+-----------------------------------
+0. preloader
+1. Theme default css
+2. header
+3. slider
+4. about-area
+5. features-box
+6. department
+7. team
+8. video-area
+9. counter
+10. footer
+*/
+
+
+
+/* 1. Theme default css */
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+ body {
+	font-family: "Inter Tight", sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	height: 100vh;
+}
+#preloader{
+	position: fixed;
+	z-index: 999;
+	background-color: #000;
+	width: 100%;
+	height: 100%;
+	/* display: flex; */
+	justify-content: center;
+}
+#preloader #loader{
+	position: relative;
+	display: block;
+	top: 50%;
+	left: 50%;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin: -70px 0 0 -70px;
+	border: 3px solid transparent;
+	border-top-color: #A0816C;
+	animation: spining 2s linear infinite;
+	-webkit-animation: spining 2s linear infinite;
+}
+#preloader #loader::before{
+	position: absolute;
+	content: "";
+	top: 5px;
+	left: 5px;
+	bottom: 5px;
+	right: 5px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-top-color: #A0816C;
+	animation: spining 3s linear infinite;
+	-webkit-animation: spining 3s linear infinite;
+}
+#preloader #loader::after{
+	position: absolute;
+	content: "";
+	top: 15px;
+	left: 15px;
+	bottom: 15px;
+	right: 15px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-bottom-color: #A0816C;
+	animation: spining 1.2s linear infinite;
+	-webkit-animation: spining 1.2s linear infinite;
+}
+
+/* active animation */
+
+@keyframes spining {
+	0% {
+		-webkit-transform: rotate(0);
+		-ms-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+	
+}
+@-webkit-keyframes spining {
+	0% {
+		-webkit-transform: rotate(0);
+		-ms-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+	
+}
+.background-default-css{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+	background-color: #1696e7;
+}
+
+html,body{
+	overflow-x: hidden;
+}
+.img {
+	max-width: 100%;
+	transition: all 0.3s ease-out 0s;
+}
+.f-left {
+	float: left
+}
+.f-right {
+	float: right
+}
+.fix {
+	overflow: hidden
+}
+a,
+.button {
+	-webkit-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	transition: all 0.3s ease-out 0s;
+}
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+a:focus,
+a:hover,
+.portfolio-cat a:hover,
+.footer -menu li a:hover {
+	color: #2B96CC;
+	text-decoration: none;
+}
+a,
+button {
+	color: #1696e7;
+	outline: medium none;
+}
+button:focus,input:focus,input:focus,textarea,textarea:focus{outline: 0}
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Inter Tight", sans-serif;
+	font-weight: normal;
+	color: #fff;
+	margin-top: 0px;
+	font-style: normal;
+	font-weight: 400;
+	text-transform: normal;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+h1 {
+	font-size: 46px;
+	font-weight: 400;
+	line-height: 54px;
+	color: #212529;
+}
+h2 {
+	font-size: 35px;
+}
+h3 {
+	font-size: 28px;
+}
+h4 {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 28px;
+	color: #212529;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none
+}
+.another_color{
+	color: #666;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 24px;
+}
+
+p {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 22px;
+	color: #666;
+	margin-bottom: 0;
+}
+hr {
+	border-bottom: 1px solid #eceff8;
+	border-top: 0 none;
+	margin: 30px 0;
+	padding: 0;
+}
+label {
+	color: #7e7e7e;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+}
+*::-moz-selection {
+	background: #d6b161;
+	color: #fff;
+	text-shadow: none;
+}
+::-moz-selection {
+	background: #444;
+	color: #fff;
+	text-shadow: none;
+}
+::selection {
+	background: #444;
+	color: #fff;
+	text-shadow: none;
+}
+*::-moz-placeholder {
+	color: #555555;
+	font-size: 14px;
+	opacity: 1;
+}
+*::placeholder {
+	color: #555555;
+	font-size: 14px;
+	opacity: 1;
+}
+.theme-overlay {
+	position: relative
+}
+.theme-overlay::before {
+	background: #1696e7 none repeat scroll 0 0;
+	content: "";
+	height: 100%;
+	left: 0;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.separator {
+	border-top: 1px solid #f2f2f2
+}
+/* button style */
+
+.btn {
+	-moz-user-select: none;
+	/* background: #1696e7 none repeat scroll 0 0; */
+	background-color: #fff;
+	border: 2px solid #212529;
+	border-radius: 9px;
+	color: #212529;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 20px;
+	font-weight: 600;
+	color: #fff;
+	letter-spacing: 1px;
+	line-height: 28px;
+	margin-bottom: 0;
+	padding: 5px 60px;
+	text-align: center;
+	text-transform: capitalize;
+	touch-action: manipulation;
+	transition: all 0.3s ease 0s;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+.breadcrumb > .active {
+	color: #888;
+}
+/* .owl-carousel .owl-nav div {
+	background: rgba(255, 255, 255, 0.8) none repeat scroll 0 0;
+	height: 40px;
+	left: 20px;
+	line-height: 40px;
+	opacity: 0;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all 0.3s ease 0s;
+	visibility: hidden;
+	width: 40px;
+}
+.owl-carousel .owl-nav div.owl-next {
+	left: auto;
+	right: 20px;
+}
+.owl-carousel:hover .owl-nav div {
+	opacity: 1;
+	visibility: visible;
+}
+.owl-carousel .owl-nav div:hover {
+	background: #2B96CC;
+	color: #fff
+} */
+
+/* scrollUp */
+#scrollUp {
+	background: #7DBA2F;
+	height: 35px;
+	width: 35px;
+	right: 50px;
+	bottom: 77px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 20px;
+	line-height: 34px;
+}
+#scrollUp:hover {
+	background: #444;
+}
+
+
+/* owl-nav */
+
+
+
+
+
+
+
+
